@@ -1,0 +1,316 @@
+/* 🌟 Основні стилі для body */
+body {
+    background: linear-gradient(135deg, #00e676, #aeea00);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Playwrite DE Grund Guides", cursive;
+    color: #0a3d0a;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+/* 🌞 Кнопка старту */
+.btn-start {
+    width: 50%;
+    margin: 150px auto;
+    padding: 50px 100px;
+    border: 4px solid #1b5e20;
+    background: linear-gradient(145deg, #69f0ae, #00e676);
+    color: #004d00;
+    font-size: 2.3em;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn-start:hover {
+    background: linear-gradient(145deg, #00c853, #76ff03);
+    box-shadow: 0 0 45px rgba(0, 255, 0, 0.9), inset 0 0 20px rgba(255, 255, 255, 0.4);
+    transform: scale(1.07);
+    color: #ffffff;
+    text-shadow: 0 0 8px #00ff66;
+}
+
+/* 💚 Картка запитання */
+.card-qw {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease;
+}
+
+/* 🌼 Кнопки відповідей */
+.answers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.ans {
+    padding: 15px 30px;
+    border: 3px solid #00c853;
+    background: linear-gradient(145deg, #b9f6ca, #69f0ae);
+    color: #003300;
+    font-size: 1.4em;
+    border-radius: 12px;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 200, 0, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+    animation: glowIn 1.2s ease;
+    /* animation-delay: 0.5s; 🕐 Затримка перед стартом анімації */
+}
+
+/* ✨ Анімація наведення */
+.card-qw .ans:hover {
+    background: linear-gradient(145deg, #00e676, #aeea00);
+    box-shadow: 0 0 30px rgba(0, 255, 100, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px) scale(1.05);
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ff99;
+}
+/* 🌿 Текст запитання */
+.qw {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #004d00;
+    text-align: center;
+    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+    border: 3px solid #00c853;
+    border-radius: 20px;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.3),
+                inset 0 0 10px rgba(255, 255, 255, 0.6);
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transform: translateY(-200px);
+    /* animation: glowIn 1.2s ease; */
+}
+
+/* ✨ М’яке сяйво при появі */
+@keyframes glowIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        box-shadow: 0 0 0 rgba(0, 255, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+    }
+}
+/* 🌈 Картка результатів */
+.result {
+    background: linear-gradient(135deg, #ccff90, #b2ff59);
+    border: 3px solid #00c853;
+    border-radius: 25px;
+    padding: 50px 70px;
+    margin: 100px auto;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 0 35px rgba(0, 255, 0, 0.7);
+    animation: popIn 1s ease;
+}
+
+.score {
+    font-size: 2.8em;
+    color: #1b5e20;
+    text-shadow: 0 0 10px #00ff66, 2px 2px 5px rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+.total {
+    font-size: 1.6em;
+    color: #004d00;
+    text-shadow: 0 0 6px #aeea00, 1px 1px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* 🌟 Анімації */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* 🌟 КРУТИЙ БЛОК РЕЗУЛЬТАТУ */
+.result {
+    background: linear-gradient(135deg, #ccff90, #76ff03);
+    border: 4px solid #00c853;
+    border-radius: 30px;
+    padding: 60px 80px;
+    margin: 100px auto;
+    width: 70%;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 255, 100, 0.7), inset 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: pulseGlow 3s infinite alternate ease-in-out;
+    perspective: 1000px;
+}
+
+/* 💎 Текст результату — великий, з 3D-ефектом */
+.result {
+    font-size: 4em;
+    font-weight: 900;
+    color: #00e676;
+    text-shadow: 
+        1px 1px 0 #1b5e20,
+        2px 2px 0 #1b5e20,
+        3px 3px 0 #1b5e20,
+        4px 4px 0 #1b5e20,
+        5px 5px 15px rgba(0, 255, 100, 0.7),
+        0 0 25px #00ff99;
+    transform: rotateX(10deg) rotateY(-5deg);
+    letter-spacing: 2px;
+    transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Ефект при наведенні */
+.result:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+    text-shadow: 
+        2px 2px 0 #1b5e20,
+        4px 4px 0 #1b5e20,
+        6px 6px 20px rgba(0, 255, 100, 0.9),
+        0 0 40px #00ff99,
+        0 0 60px #aeea00;
+}
+
+/* 💚 Для чисел — контрастний колір і блиск */
+.score, .total {
+    color: #ffffff;
+    font-size: 1.2em;
+    text-shadow:
+        0 0 10px #00ff80,
+        0 0 20px #00e676,
+        0 0 40px #76ff03;
+    font-weight: 700;
+}
+
+/* 🌈 Анімація “пульсації” рамки */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 30px rgba(0, 255, 100, 0.5),
+                    inset 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 60px rgba(0, 255, 100, 0.9),
+                    inset 0 0 25px rgba(255, 255, 255, 0.4);
+    }
+}
+
+
+/* 💫 Блок підсумку результатів */
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+    border: 4px solid #00c853;
+    border-radius: 25px;
+    padding: 40px 60px;
+    margin: 80px auto 40px;
+    width: 70%;
+    box-shadow: 0 0 35px rgba(0, 255, 100, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    animation: popIn 0.8s ease;
+    transform: rotateX(8deg) rotateY(-3deg);
+    transition: all 0.4s ease;
+}
+
+.result:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+    box-shadow: 0 0 45px rgba(0, 255, 100, 0.8), inset 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+/* 🌿 Текст усередині результату */
+.result span {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #006400;
+    text-shadow: 0 0 8px rgba(0, 255, 100, 0.7);
+    letter-spacing: 1px;
+}
+
+.result::before {
+    content: "🌟";
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #00ff66;
+    text-shadow: 0 0 15px #00ff99;
+}
+
+/* 🌸 Додаткові статистичні картки */
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* 💚 Картка статистики — як запитання */
+.stats .card_qw {
+    background: rgba(255, 255, 255, 0.85);
+    border: 3px solid #00c853;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+    padding: 25px 40px;
+    width: 300px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #004d00;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    animation: glowIn 1s ease;
+}
+
+.stats .card_qw:hover {
+    background: linear-gradient(145deg, #b9f6ca, #aeea00);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 35px rgba(0, 255, 0, 0.7), inset 0 0 15px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ff99;
+}
+
+/* 🌈 Анімації залишаються ті ж */
+@keyframes glowIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        box-shadow: 0 0 0 rgba(0, 255, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+    }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
