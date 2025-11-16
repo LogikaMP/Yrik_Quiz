@@ -72,7 +72,7 @@ for(let i = 0; i <cookie.length; i++){
 let restart = document.querySelector(".restart")
 restart.addEventListener("click", function(){
       anime ({
-        targets: btn_start,
+        targets: restart,
         rotate: 360,
         scale:[2,1,2,1,2,1],
         color: ["#008080","#00FFFF","#7d789eff","#008080","#B0C4DE","#052222ff"],
@@ -82,4 +82,5 @@ restart.addEventListener("click", function(){
     })
 
 })
+
 
