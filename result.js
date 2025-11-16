@@ -18,7 +18,7 @@ let cookie = document.cookie.split(";")
 let score = document.querySelector(".score")
 let total = document.querySelector(".total")
 let stats = document.querySelector(".stats")
-let restart = document.querySelector(".restart")
+
 for(let i = 0; i <cookie.length; i++){
     let [name, value] = cookie[i]. split("=")
     if (name.trim() =="score"){
@@ -69,7 +69,7 @@ for(let i = 0; i <cookie.length; i++){
       </div>`
     
 }}
-
+let restart = document.querySelector(".restart")
 restart.addEventListener("click", function(){
       anime ({
         targets: btn_start,
@@ -82,3 +82,4 @@ restart.addEventListener("click", function(){
     })
 
 })
+
