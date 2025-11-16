@@ -80,4 +80,5 @@ restart.addEventListener("click", function(){
     }).finished.then(function(){
         location.href = "test.html"
     })
+
 })
