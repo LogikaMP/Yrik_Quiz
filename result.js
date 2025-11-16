@@ -17,7 +17,8 @@ let answers = []
 let cookie = document.cookie.split(";")
 let score = document.querySelector(".score")
 let total = document.querySelector(".total")
-let stats = this.document.querySelector(".stats")
+let stats = document.querySelector(".stats")
+let restart = document.querySelector(".restart")
 for(let i = 0; i <cookie.length; i++){
     let [name, value] = cookie[i]. split("=")
     if (name.trim() =="score"){
@@ -68,3 +69,15 @@ for(let i = 0; i <cookie.length; i++){
       </div>`
     
 }}
+
+restart.addEventListener("click", function(){
+      anime ({
+        targets: btn_start,
+        rotate: 360,
+        scale:[2,1,2,1,2,1],
+        color: ["#008080","#00FFFF","#7d789eff","#008080","#B0C4DE","#052222ff"],
+        duration: 1000
+    }).finished.then(function(){
+        location.href = "test.html"
+    })
+})
